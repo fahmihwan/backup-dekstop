@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="">
+            <input type="date" id="tgl-lahir" />
+            <input type="text" id="usia" readonly placeholder="usia" />
+            <input type="text" id="berat" placeholder="berat badan" />
+            <input type="text" id="tinggi" placeholder="tinggi badan" />
+        </form>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#tgl-lahir").change(function () {
+                    var today = new Date();
+                    var birthDate = new Date($(this).val());
+                    var age = today.getFullYear() - birthDate.getFullYear();
+                    var m = today.getMonth() - birthDate.getMonth();
+                    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                        age <= 0 ? (age = "inputkan data dengan benar") : age--;
+                    }
+                    $("#usia").val(age);
+                    if (age > 5) {
+                        $("#berat").prop("disabled", true);
+                        $("#tinggi").prop("disabled", true);
+                    } else {
+                        $("#berat").prop("disabled", false);
+                        $("#tinggi").prop("disabled", false);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

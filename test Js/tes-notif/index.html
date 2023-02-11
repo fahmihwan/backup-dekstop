@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(246, 246, 246)
+        }
+
+        .btn-group ul li a.scanQr {
+            color: white;
+            border: 8px solid rgb(246, 246, 246);
+            /* background-color: rgb(157, 135, 135); */
+            background-color: rgb(233, 132, 8);
+            height: 80px;
+            width: 80px;
+            border-radius: 80px;
+            display: block;
+            font-size: 30px;
+            transform: translateY(-40px);
+            line-height: 60px;
+        }
+
+        table tr td.name {
+            width: 160px;
+        }
+
+
+        #accordionExample {
+            width: 100px;
+
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+
+        .step-button {
+            margin-bottom: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            /* background-color: #ffc106; */
+            color: white;
+            background-color: rgb(225, 225, 225);
+            transition: .4s;
+        }
+
+        .step-title {
+            margin-left: 380px;
+            transform: translateY(-74px);
+            width: 300px;
+            /* width: 100%; */
+            text-align: left;
+        }
+
+        /* .step-button[aria-expanded="true"] {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                width: 60px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                height: 60px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                background-color: #ffc106;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color: #fff;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            } */
+
+        .proses {
+            width: 60px;
+            height: 60px;
+            background-color: #ffc106;
+            color: #fff;
+        }
+
+        .done {
+            background-color: #ffc106;
+            color: #fff;
+        }
+
+        .step-item {
+            z-index: 3;
+            text-align: center;
+            /* height: 20px; */
+        }
+
+
+
+        .progress {
+            transform: rotate(90deg);
+            -webkit-appearance: none;
+            position: absolute;
+            top: 130px;
+            width: 180px;
+            z-index: 2;
+            height: 10px;
+            margin-left: 0px;
+            /* margin-bottom: 18px; */
+        }
+
+        /* to customize progress bar */
+        .progress::-webkit-progress-value {
+            background-color: #ffc106;
+            transition: .5s ease;
+        }
+
+        .progress::-webkit-progress-bar {
+            background-color: rgb(237, 237, 237);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="list-data">
+
+        <!-- <section class="mb-5">
+            <p class="">Pelanggan atas nama: <b>Daris</b></p>
+            <hr>
+            <div class="accordion" id="accordionExample">
+                <div class="steps">
+                    <progress class="progress" value=50 max=100></progress>
+                    <div class="step-item">
+                        <button disabled class="step-button text-center done" type="button">
+                            <i class="fas fa-user-clock"></i>
+                            order
+                        </button>
+                        <div class="step-title">
+                            Pesanan anda menunggu antrian
+                        </div>
+                    </div>
+                    <div class="step-item" style="">
+                        <button disabled class="step-button text-center done" type="button">
+                            <i class="fas fa-blender"></i>
+                            waiting
+                        </button>
+                        <div class="step-title">
+                            Pesanan anda dalam proses dibuat
+                        </div>
+                    </div>
+                    <div class="step-item" style="height: 70px; ">
+                        <button disabled class="step-button text-center" type="button">
+                            <i class="fas fa-mug-hot"></i>
+                            finish
+                        </button>
+                        <div class="step-title">
+                            Pesanan siap di antarkan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
